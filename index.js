@@ -1,12 +1,16 @@
 module.exports = {
-    book: {
-        assets: "./book",
-        js: [
-            "https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js",
-            "plugin.js"
-        ],
-        css: [
-            "plugin.css"
-        ]
-    }
+  hooks: {
+    init: function () {
+      let config = this.config.values.pluginsConfig;
+      if (config.cdn.img_url === undefined) {
+        config.cdn.img_url = config.cdn.url;
+      } else if (
+        config.cdn.img_url.indexOf("http") !== 0 &&
+        config.cdn.img_url.indexOf("//") !== 0
+      ) {
+        config.cdn.img_url = config.cdn.url + config.cdn.img_url;
+      }
+    },
+    finish: require('./lib/process').processFinish
+  },
 };

@@ -10,7 +10,17 @@ $ npm install gitbook-plugin-cdn --save
 
 ## Usage
 
+```
 
+"plugins": ["cdn"],
+"pluginsConfig": {
+    "cdn":{
+        "url":"//cdn.jsdelivr.net/gh/zhepama/C-Sharp-Playground@gh-pages/",
+        "img_url":"//cdn.jsdelivr.net/gh/zhepama/C-Sharp-Playground@gh-pages///"
+    }
+}  
+
+```
 
 
 ## License
