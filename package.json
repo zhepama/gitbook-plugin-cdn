@@ -1,0 +1,52 @@
+{
+  "name": "gitbook-plugin-cdn",
+  "version": "1.0.0",
+  "description": "为gitbook中的css,js,图片等更换成cdn地址",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint .",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhepama/gitbook-plugin-cdn.git"
+  },
+  "keywords": [
+    "gitbook",
+    "image",
+    "path",
+    "cdn"
+  ],
+  "author": "zhepama@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhepama/gitbook-plugin-cdn/issues"
+  },
+  "homepage": "https://github.com/zhepama/gitbook-plugin-cdn#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "jest": "^24.9.0"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "engines": {
+    "gitbook": ">=2.5.0"
+  },
+  "gitbook": {
+    "properties": {
+      "url": {
+        "required": true,
+        "title": "CDN Url",
+        "type": "string"
+      },
+      "img_url": {
+        "required": false,
+        "title": "Image CDN Url",
+        "type": "string"
+      }
+    }
+  }
+}
